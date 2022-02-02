@@ -7,7 +7,7 @@
 ### Points to note when writting a GPU code
 - The gpu accelerated fucntons are saved with an extension > "**.cu**"
 - The gpu functions should be  always declared as a global function `__global__ void GPUFunction  `<br />One thing to note here is the return type. The return type should be -void- since it is declared as global
-- During the function call it should follow the syntax `GPUFunction<<<1, 1>>>();` <br /> We will be looking into this syntax in detail. Basic idea is when we are calling a gpu function (which we call as kernel) and <<< >>> provides an execution config for the GPU.
+- During the function call it should follow the syntax `GPUFunction<<<1, 1>>>();` <br /> We will be looking into this syntax in detail.But, basic idea is when we are calling a gpu function (which we call as kernel) `<<< >>>` provides an execution config for the GPU.
 - When you are executing a GPU function, it happens asynchronously with the CPU process. So we need to have something which will ensure the synchronization between CPU and GPU process. `cudaDeviceSynchronize();` will ensure this. Add this immidiately after you call a GPU function.
 - Putting all together, we can write a gpu code as given below 
 ``` 
