@@ -98,7 +98,7 @@ We can allocate memory such that it can be accessed from GPU as well as CPU by w
 - 
 ### Data Sets Larger Than the Grid
 - These days it is so often to see the datasets which has more than the total number of threads . So we nned something that can make a loop and reuse the threads when current procrss is over. This is known a **Grid Stride Loop**
-- Lets see an example code which is used to double elements in an arrya using Grid Stride Loop 
+- Lets see an example code which is used to doubles element values in an arrya using Grid Stride Loop 
 ```
 #include <stdio.h>
 
