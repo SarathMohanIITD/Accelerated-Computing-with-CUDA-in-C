@@ -46,7 +46,7 @@ int main()
 {
 
   int N = 10;
-  loop(N);
+  CPUloop(N);
 }
 ```
 Now lets see how we can use GPUs to accelerate this for loop
